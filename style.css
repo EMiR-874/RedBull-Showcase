@@ -1,0 +1,305 @@
+/* ================================================== FONTS ================================================== */
+@import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap");
+
+@font-face {
+  font-family: "RedBull-italic";
+  src: url(fonts/red-bull_italic.otf);
+}
+
+/* ================================================== ROOT ================================================== */
+
+:root {
+  --fMain: "Oxanium", sans-serif;
+  --fSub: "Afacad Flux", sans-serif;
+  --fRedBullItalic: "RedBull-italic";
+}
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+body {
+  transition: background-color 0.5s ease-in-out;
+}
+
+.orange_can,
+.red_can,
+.yellow_can,
+.white_can {
+  background-color: transparent;
+}
+
+/* ================================================== MAIN CONTENT ================================================== */
+article {
+  padding: 5% 0;
+  width: 100%;
+  position: relative;
+  z-index: -5;
+}
+
+img {
+  user-select: none;
+}
+
+.can-container {
+  width: 60%;
+  position: relative;
+  display: inline-block;
+}
+
+.center_wrapper {
+  display: flex;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.can-container::after {
+  content: "";
+  position: absolute;
+  width: 240px;
+  height: 20px;
+  background: rgba(44, 44, 44, 0.3);
+  border-radius: 50%;
+  bottom: 10%;
+  left: 40%;
+  transform: translateX(-50%);
+  filter: blur(6px);
+  animation: can2ShadowAnimation 5s infinite reverse ease-in-out;
+  animation-delay: 1.5s;
+}
+
+.can-container::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 20px;
+  background: rgba(44, 44, 44, 0.3);
+  border-radius: 50%;
+  bottom: -10%;
+  transform: translateX(-50%);
+  filter: blur(6px);
+  animation: can1ShadowAnimation 5s infinite reverse ease-in-out;
+}
+
+h2 {
+  margin-top: 0%;
+  margin-left: 5%;
+  font-family: var(--fRedBullItalic);
+  font-weight: 10;
+  font-size: 3rem;
+  color: rgb(35, 35, 114);
+}
+
+h1 {
+  font-family: var(--fRedBullItalic);
+  font-size: 10rem;
+  margin: 0 auto;
+  text-indent: 30%;
+  text-transform: uppercase;
+  position: relative;
+  z-index: -2;
+}
+
+h1 span {
+  margin-left: 38%;
+}
+
+.orange_can p,
+.red_can p,
+.yellow_can p,
+.white_can p {
+  font-family: var(--fMain);
+  font-size: 2rem;
+  width: 40%;
+  z-index: 10;
+}
+
+.cssanimation,
+.cssanimation span {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.cssanimation span {
+  display: inline-block;
+}
+
+.leSnake span {
+  animation: leSnake 2s ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.card_wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 10%;
+}
+
+.card_wrapper h3 {
+  font-family: var(--fRedBullItalic);
+  font-size: 2.2rem;
+  font-weight: 10;
+}
+.card {
+  width: 20%;
+}
+.card_wrapper h4 {
+  font-size: 1.8rem;
+  font-family: var(--fMain);
+  font-weight: 400;
+}
+
+/* ================================================== KEYFRAMES ================================================== */
+@keyframes leSnake {
+  from,
+  to {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(40px);
+  }
+}
+
+@keyframes canAnimation {
+  0% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes can1ShadowAnimation {
+  0% {
+    transform: translateY(-5px);
+    width: 250px;
+    left: 19%;
+  }
+  50% {
+    transform: translateY(5px);
+    width: 280px;
+    left: 16%;
+  }
+  100% {
+    transform: translateY(-5px);
+    width: 250px;
+    left: 19%;
+  }
+}
+
+@keyframes can2ShadowAnimation {
+  0% {
+    transform: translateY(-5px);
+    width: 220px;
+    left: 29%;
+  }
+  50% {
+    transform: translateY(5px);
+    width: 240px;
+    left: 30%;
+  }
+  100% {
+    transform: translateY(-5px);
+    width: 220px;
+    left: 29%;
+  }
+}
+
+/* ================================================== MAIN PAGE ================================================== */
+section {
+  width: 70%;
+  margin: 0 auto;
+}
+
+/* ====================== ORANGE ====================== */
+.orange_text {
+  color: #b34205;
+}
+
+#o_can-1 {
+  position: relative;
+  z-index: 1;
+  left: 14%;
+  animation: canAnimation 5s infinite reverse ease-in-out;
+}
+#o_can-2 {
+  position: absolute;
+  z-index: 0;
+  left: 29%;
+  top: -22%;
+  height: 500px !important;
+  animation: canAnimation 5s infinite reverse ease-in-out;
+  animation-delay: 1s;
+}
+
+/* ====================== RED ====================== */
+
+.red_text {
+  color: #a73028;
+}
+
+#r_can-1 {
+  position: relative;
+  z-index: 1;
+  left: 14%;
+  animation: canAnimation 5s infinite reverse ease-in-out;
+}
+#r_can-2 {
+  position: absolute;
+  z-index: 0;
+  left: 29%;
+  top: -22%;
+  height: 500px !important;
+  animation: canAnimation 5s infinite reverse ease-in-out;
+  animation-delay: 1s;
+}
+
+/* ====================== YELLOW ====================== */
+.yellow_text {
+  color: #c29308;
+}
+
+#y_can-1 {
+  position: relative;
+  z-index: 1;
+  left: 14%;
+  animation: canAnimation 5s infinite reverse ease-in-out;
+}
+#y_can-2 {
+  position: absolute;
+  z-index: 0;
+  left: 29%;
+  top: -22%;
+  height: 500px !important;
+  animation: canAnimation 5s infinite reverse ease-in-out;
+  animation-delay: 1s;
+}
+
+/* ====================== WHITE ====================== */
+.white_text {
+  color: #838281;
+}
+
+#w_can-1 {
+  position: relative;
+  z-index: 1;
+  left: 14%;
+  animation: canAnimation 5s infinite reverse ease-in-out;
+}
+#w_can-2 {
+  position: absolute;
+  z-index: 0;
+  left: 29%;
+  top: -22%;
+  height: 500px !important;
+  animation: canAnimation 5s infinite reverse ease-in-out;
+  animation-delay: 1s;
+}

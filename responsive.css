@@ -1,0 +1,168 @@
+@media (max-width: 1440px) {
+  h1 {
+    text-align: center;
+    text-indent: 0;
+  }
+  h1 span {
+    margin-left: 0;
+  }
+  section {
+    width: 90%;
+  }
+  .center_wrapper {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: 5%;
+  }
+  .orange_can p,
+  .red_can p,
+  .yellow_can p,
+  .white_can p {
+    width: 90%;
+  }
+  h2 {
+    text-align: center;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .center_wrapper {
+    gap: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 40%;
+  }
+  .card h4 {
+    margin-top: -5%;
+  }
+  .red_can h1 {
+    font-size: 8rem;
+  }
+  .red_can .center_wrapper {
+    margin-top: 10%;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 7rem;
+  }
+  .red_can h1 {
+    font-size: 7rem;
+  }
+
+  .red_can .center_wrapper,
+  .center_wrapper {
+    margin-top: 20%;
+  }
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 6rem;
+  }
+  .red_can h1 {
+    font-size: 6rem;
+  }
+  img {
+    height: 400px !important;
+  }
+  #o_can-2,
+  #r_can-2,
+  #y_can-2,
+  #w_can-2 {
+    height: 380px !important;
+  }
+  .can-container::after {
+    width: 140px !important;
+    left: 50% !important;
+  }
+  .can-container::before {
+    width: 200px !important;
+    left: 10% !important;
+  }
+  #o_can-1,
+  #r_can-1,
+  #y_can-1,
+  #w_can-1 {
+    left: 0%;
+  }
+  .card {
+    width: 100%;
+  }
+  article {
+    padding: 20% 0;
+  }
+}
+
+@media (max-width: 425px) {
+  .center_wrapper {
+    gap: 60px;
+  }
+  .orange_can p,
+  .red_can p,
+  .yellow_can p,
+  .white_can p {
+    width: 100%;
+  }
+  h2 {
+    font-size: 2.2rem;
+    padding-bottom: 15%;
+  }
+  .card {
+    margin-top: -12%;
+  }
+  h1 {
+    font-size: 5rem;
+  }
+  .red_can h1 {
+    font-size: 4.6rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .red_can h1 {
+    font-size: 4rem;
+  }
+  .red_can .center_wrapper,
+  .center_wrapper {
+    margin-top: 25%;
+  }
+}
+
+@media (max-width: 320px) {
+  h1 {
+    font-size: 4.5rem;
+  }
+  .red_can h1 {
+    font-size: 3.6rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  #o_can-1,
+  #r_can-1,
+  #y_can-1,
+  #w_can-1 {
+    height: 350px !important;
+  }
+  #o_can-2,
+  #r_can-2,
+  #y_can-2,
+  #w_can-2 {
+    height: 320px !important;
+  }
+  .can-container::after {
+    width: 100px !important;
+    left: 50% !important;
+  }
+  .can-container::before {
+    width: 180px !important;
+    left: 10% !important;
+  }
+}
